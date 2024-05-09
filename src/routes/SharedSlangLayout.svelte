@@ -6,9 +6,8 @@
 	export let selectedSlang;
 
 	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
 	function goBackToHome() {
-		goto(`/${base}`, { replaceState: true });
+		goto(`/`, { replaceState: true });
 	}
 </script>
 
