@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { onMount, onDestroy } from 'svelte';
 	import { slide } from 'svelte/transition';
-
+	import { base } from '$app/paths';
 	let slangWords = [
 		{ word: 'Lit', meaning: 'Amazing, exciting' },
 		{ word: 'Salty', meaning: 'Bitter, upset' },
@@ -53,10 +53,10 @@
 		</div>
 
 		<div class="flex flex-wrap justify-center gap-4 mt-8">
-			<button class="btn btn-primary btn-wide btn-lg" on:click={() => goto('/millennials')}>
+			<button class="btn btn-primary btn-wide btn-lg" on:click={() => goto(`${base}/millennials`)}>
 				<i class="fas fa-grin-stars mr-2"></i> Millennial Slang
 			</button>
-			<button class="btn btn-primary btn-wide btn-lg" on:click={() => goto('/genz')}>
+			<button class="btn btn-primary btn-wide btn-lg" on:click={() => goto(`${base}/genz`)}>
 				<i class="fas fa-rocket mr-2"></i> Gen Z Slang
 			</button>
 		</div>

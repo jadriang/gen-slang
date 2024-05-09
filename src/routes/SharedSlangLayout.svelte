@@ -6,8 +6,9 @@
 	export let selectedSlang;
 
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	function goBackToHome() {
-		goto('/', { replaceState: true });
+		goto(`/${base}`, { replaceState: true });
 	}
 </script>
 
@@ -23,6 +24,8 @@
 			<div class="w-1/3 rounded-box p-4 shadow-lg" style="height: 60vh; overflow-y: auto;">
 				<ul class="menu-list text-xl">
 					{#each slangs as slang}
+						<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<li
 							class={`px-4 py-3 rounded-lg transition-colors cursor-pointer ${selectedSlang === slang ? 'bg-primary text-primary-content' : 'hover:bg-primary'}`}
 							on:click={() => selectSlang(slang)}
