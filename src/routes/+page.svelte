@@ -34,17 +34,17 @@
 		<h1 class="text-5xl font-bold">Welcome to GenSlang!</h1>
 		<p class="py-6">Dive into the dynamic world of generational slang.</p>
 
-		<div class="mb-8">
+		<div class="mb-8 h-6">
 			{#key index}
-				<p transition:slide class="text-3xl font-semibold mb-4">
-					<span>{slangWords[index].word}</span> - {slangWords[index].meaning}
+				<p transition:slide class="text-3xl mb-4">
+					<span class="font-semibold">{slangWords[index].word}</span> - {slangWords[index].meaning}
 				</p>
 			{/key}
 		</div>
 
 		<div class="card shadow-xl">
 			<div class="card-body">
-				<h2 class="card-title">What is Slang?</h2>
+				<h2 class="card-title justify-center">What is Slang?</h2>
 				<p>
 					Slang consists of informal words or phrases that are often playful, vivid, and reflect the
 					dynamics of social identity and group membership.

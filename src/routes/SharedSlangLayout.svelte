@@ -8,7 +8,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	function goBackToHome() {
-		goto(`${base}`, { replaceState: true });
+		goto(base ? `${base}` : '/', { replaceState: true });
 	}
 </script>
 
@@ -27,7 +27,7 @@
 						<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<li
-							class={`px-4 py-3 rounded-lg transition-colors cursor-pointer ${selectedSlang === slang ? 'bg-primary' : 'hover:bg-primary'}`}
+							class={`px-4 py-3 rounded-lg transition-colors cursor-pointer ${selectedSlang === slang ? 'bg-primary text-white' : 'hover:bg-primary hover:text-white'}`}
 							on:click={() => selectSlang(slang)}
 						>
 							{slang.text}
